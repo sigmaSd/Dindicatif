@@ -2,7 +2,7 @@
 
 Deno wrapper over https://github.com/console-rs/indicatif
 
-# Usage
+## Usage
 
 ```ts
 import ProgressBar from "https://raw.githubusercontent.com/sigmaSd/Dindicatif/master/indicatif.ts";
