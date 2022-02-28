@@ -14,7 +14,7 @@ await bolt.init();
 
 const libIndicatif = bolt.getLib(indicatif.name);
 
-class ProgressBar {
+export default class ProgressBar {
   lib;
   me;
 
