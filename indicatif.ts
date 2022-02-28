@@ -31,10 +31,3 @@ export default class ProgressBar {
     this.lib.symbols.inc(this.me, n);
   }
 }
-
-const ps = new ProgressBar();
-
-for (const _ of [...Array(100)]) {
-  ps.inc(1);
-  Deno.sleepSync(100);
-}
