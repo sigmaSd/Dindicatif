@@ -15,19 +15,19 @@ await bolt.init();
 const libIndicatif = bolt.getLib(indicatif.name);
 
 export default class ProgressBar {
-  lib;
-  me;
+  #lib;
+  #me;
 
   constructor(len: number) {
     const lib = Deno.dlopen(libIndicatif, {
       "new": { parameters: ["u64"], result: "pointer" },
       "inc": { parameters: ["pointer", "u64"], result: "void" },
     });
-    this.lib = lib;
-    this.me = lib.symbols.new(len);
+    this.#lib = lib;
+    this.#me = lib.symbols.new(len);
   }
 
   inc(n: number) {
-    this.lib.symbols.inc(this.me, n);
+    this.#lib.symbols.inc(this.#me, n);
   }
 }
