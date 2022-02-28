@@ -2,9 +2,9 @@ pub struct ProgressBar {
     inner: indicatif::ProgressBar,
 }
 #[no_mangle]
-pub fn new() -> *mut ProgressBar {
+pub fn new(len: u64) -> *mut ProgressBar {
     Box::into_raw(Box::new(ProgressBar {
-        inner: indicatif::ProgressBar::new(100),
+        inner: indicatif::ProgressBar::new(len),
     }))
 }
 #[no_mangle]

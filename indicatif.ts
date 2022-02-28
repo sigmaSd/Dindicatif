@@ -18,13 +18,13 @@ export default class ProgressBar {
   lib;
   me;
 
-  constructor() {
+  constructor(len: number) {
     const lib = Deno.dlopen(libIndicatif, {
-      "new": { parameters: [], result: "pointer" },
+      "new": { parameters: ["u64"], result: "pointer" },
       "inc": { parameters: ["pointer", "u64"], result: "void" },
     });
     this.lib = lib;
-    this.me = lib.symbols.new();
+    this.me = lib.symbols.new(len);
   }
 
   inc(n: number) {
