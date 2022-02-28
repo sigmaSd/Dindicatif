@@ -1,4 +1,4 @@
-import { Bolt, Crate } from "https://deno.land/x/bolt@0.1.1/src/bolt.ts";
+import { Bolt, Crate } from "https://deno.land/x/bolt@0.1.5/src/bolt.ts";
 
 const indicatif: Crate = {
   name: "indicatifwrap",
