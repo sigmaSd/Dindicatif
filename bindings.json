@@ -1,1 +1,0 @@
-{"name":"indicatifWrap","littleEndian":true,"symbols":{},"typeDefs":{"P":{"p":"indicatif"}},"tsTypes":{"P":"export type P = {\n    p: ProgressBar;\n};"}}
