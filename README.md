@@ -14,7 +14,7 @@ for (const _ of [...Array(100)]) {
   Deno.sleepSync(100);
 }
 
-for (const _ if ProgressBar.progress(0,10)) {
+for (const _ of ProgressBar.progress(0,10)) {
   Deno.sleepSync(100);
 }
 ```
