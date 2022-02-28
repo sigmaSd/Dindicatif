@@ -30,4 +30,12 @@ export default class ProgressBar {
   inc(n: number) {
     this.#lib.symbols.inc(this.#me, n);
   }
+
+  static *progress(start: number, end: number) {
+    const bar = new ProgressBar(end - start);
+    for (let i = 0; i < end; i++) {
+      bar.inc(1);
+      yield i;
+    }
+  }
 }
