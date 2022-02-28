@@ -1,9 +1,11 @@
 # Dindicatif
+
 Deno wrapper over https://github.com/console-rs/indicatif
 
 # Usage
+
 ```ts
-import ProgressBar from "https://raw.githubusercontent.com/sigmaSd/Dindicatif/master/indicatif.ts"
+import ProgressBar from "https://raw.githubusercontent.com/sigmaSd/Dindicatif/master/indicatif.ts";
 
 const ps = new ProgressBar();
 
